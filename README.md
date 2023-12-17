@@ -23,21 +23,21 @@ API Collection
 
 http://127.0.0.1:8000/api/
 
-#### GET Employee Data
+1. GET Employee Data
 ---
 
 URL: http://127.0.0.1:8000/api/employee/
 
 Method: **GET**
 
-#### GET Product Data
+2. GET Product Data
 ---
 
 URL: http://127.0.0.1:8000/api/data/products/
 
 Method: **GET**
 
-#### POST Order Report
+3. POST Order Report
 ---
 
 URL: http://127.0.0.1:8000/api/data/order-report/
@@ -48,8 +48,7 @@ Headers: Content-Type: application/json
 
 Body: JSON with sample data for the order report
 
-Example Body :
----
+### Example Body :
 
 ```
 {
