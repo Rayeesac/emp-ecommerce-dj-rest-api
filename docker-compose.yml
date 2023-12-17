@@ -1,0 +1,42 @@
+version : "3"
+networks:
+    generic-network:
+        external:
+            name: generic-network
+services:
+  db:
+    image: postgres
+    container_name: postgres 
+    volumes:
+      - ./services/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./pgdata:/var/lib/postgresql/data
+    env_file:
+      - ./services/.db_parameter
+    networks:
+      - generic-network
+  django:
+    container_name: django
+    build: .
+    restart: 'always'
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+    networks:
+      - generic-network
+    env_file:
+      - .env
+  adminer:
+    container_name: adminer
+    image: adminer:4.7.6-standalone
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    networks:
+      - generic-network
