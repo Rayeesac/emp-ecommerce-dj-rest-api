@@ -21,24 +21,27 @@ cd ../ && docker-compose -f docker-compose.yml down && docker-compose -f docker-
 API Collection
 -------------------
 
-http://127.0.0.1:8000/api/
+Here is the complete list of URL: http://127.0.0.1:8000/api/
 
 1. GET Employee Data
----
+
 
 URL: http://127.0.0.1:8000/api/employee/
 
 Method: **GET**
 
-2. GET Product Data
 ---
+
+2. GET Product Data
+
 
 URL: http://127.0.0.1:8000/api/data/products/
 
 Method: **GET**
 
-3. POST Order Report
 ---
+
+3. POST Order Report
 
 URL: http://127.0.0.1:8000/api/data/order-report/
 
@@ -59,3 +62,5 @@ Body: JSON with sample data for the order report
     }
 }
 ```
+
+---
