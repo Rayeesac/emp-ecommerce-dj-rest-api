@@ -23,29 +23,29 @@ API Collection
 
 Here is the complete list of URL: http://127.0.0.1:8000/api/
 
-1. GET Employee Data
+### GET Employee Data
 
 
 URL: http://127.0.0.1:8000/api/employee/
 
-Method: **GET**
+Method: `GET`
 
 ---
 
-2. GET Product Data
+### GET Product Data
 
 
 URL: http://127.0.0.1:8000/api/data/products/
 
-Method: **GET**
+Method: `GET`
 
 ---
 
-3. POST Order Report
+### POST Order Report
 
 URL: http://127.0.0.1:8000/api/data/order-report/
 
-Method: **POST**
+Method: `POST`
 
 Headers: Content-Type: application/json
 
