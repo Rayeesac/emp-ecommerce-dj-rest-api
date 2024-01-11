@@ -29,6 +29,8 @@ services:
     tty: true
     networks:
       - generic-network
+    env_file:
+      - .env
   adminer:
     container_name: adminer
     image: adminer:4.7.6-standalone
